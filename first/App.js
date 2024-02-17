@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Login from './src/screens/login/Login'
 import Home from './src/screens/home/Home'
+import Toast from 'react-native-toast-message'
 
 const Stack = createNativeStackNavigator()
 
@@ -20,10 +21,11 @@ const App = () => {
        <CounterSamples/> */}
       <NavigationContainer >
        <Stack.Navigator>
-        <Stack.Screen name='Login' component={Login} options={{ title: 'Merhaba' }}/>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name='Login' component={Login} options={{ title: 'Merhaba' }}/>
        </Stack.Navigator>
       </NavigationContainer>
+      <Toast />
     </>
   )
    
